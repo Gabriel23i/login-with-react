@@ -7,15 +7,14 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { toast } from 'react-toastify';
 
-export default function AlertDialog({ chechUser }) {
+export default function AlertDialog({ checkUser }) {
   const [open, setOpen] = React.useState(true);
 
   const handleClose = () => {
     localStorage.removeItem('usuario');
     setOpen(false);
-    chechUser();
-    toast.success('Logout feito!')
-    window.location.reload()
+    checkUser();
+    toast.success('Logout!')
   };
 
   return (
